@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travaux Dépannages Habitation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(45, 45, 45, 0.85)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><path fill="%23ff8c00" opacity="0.2" d="M0 300L50 283.3C100 266.7 200 233.3 300 233.3C400 233.3 500 266.7 600 283.3C700 300 800 300 900 283.3C1000 266.7 1100 233.3 1150 216.7L1200 200V600H1150C1100 600 1000 600 900 600C800 600 700 600 600 600C500 600 400 600 300 600C200 600 100 600 50 600H0V300Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 2rem 100px;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+			color:orange;
+			
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .cta-button {
+			display: inline-block;
+			background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+			color: white;
+			padding: 1rem 2.5rem;
+			text-decoration: none;
+			border-radius: 50px;
+			font-size: 1.1rem;
+			font-weight: bold;
+			transition: all 0.3s;
+			box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+			width: 300px; /* <-- même largeur que mail-button */
+			text-align: center;
+		}
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, #ffa500 0%, #ffb700 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 165, 0, 0.5);
+		}
+      .mail-button {
+    		display: inline-block;
+            background: -webkit-linear-gradient(top left, #ff8c00 0%, #ffa500 100%);
+            background: -o-linear-gradient(top left, #ff8c00 0%, #ffa500 100%);
+			background: linear-gradient(to bottom right, #ff8c00 0%, #ffa500 100%);
+			color: white;
+			padding: 1rem 2.5rem;
+			text-decoration: none;
+			border-radius: 50px;
+			font-size: 1.1rem;
+			font-weight: bold;
+			transition: all 0.3s;
+			box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+			cursor: pointer;
+			border: none;
+			width: 300px; /* <-- même largeur que le bouton téléphone */
+			text-align: center;
+		}
+
+		.mail-button:hover {
+			background: linear-gradient(135deg, #ffa500 0%, #ffb700 100%);
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(255, 165, 0, 0.5);
+		}
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a1a1a;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .expertise-section {
+            background: linear-gradient(135deg, #fff9e6 0%, #ffe0b3 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .expertise-badge {
+            display: inline-block;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .expertise-number {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #ff8c00;
+            margin-bottom: 1rem;
+        }
+
+        .zone-section {
+            background: white;
+        }
+
+        .zone-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .zone-item {
+            background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+        }
+
+        .contact-section {
+            background: #1a1a1a;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: #0a0a0a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .urgence-banner {
+            background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="urgence-banner">
+        🚨 DÉPANNAGES URGENTS 7J/7 - Intervention Rapide
+    </div>
+
+    <header>
+        <nav>
+            <div class="logo"><img src="../LOGO/logo TDH sans fond.png" width="80" height="55" alt=""/></div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#zone">Zone d'intervention</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Travaux Dépannages Habitation</h1>
+        <p>Votre artisan de confiance dans les Bouches-du-Rhône</p>
+        <p style="font-size: 1.1rem; margin-bottom: 2rem;">30 ans d'expérience à votre service</p>
+        <a href="#contact" class="cta-button">Demander un devis gratuit</a>
+    </section>
+
+    <section id="services" class="container">
+        <h2 class="section-title">Nos Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Plomberie</h3>
+                <p>Dépannage, installation et entretien de tous vos équipements sanitaires</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Électricité</h3>
+                <p>Installation électrique, mise aux normes et dépannage d'urgence</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Peinture</h3>
+                <p>Travaux de peinture intérieure et extérieure pour embellir votre habitat</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔲</div>
+                <h3>Carrelage</h3>
+                <p>Pose et rénovation de carrelage pour sols et murs</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">❄️</div>
+                <h3>Climatisation</h3>
+                <p>Installation, entretien et dépannage de systèmes de climatisation</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💨</div>
+                <h3>Ventilation</h3>
+                <p>Solutions de ventilation pour un air sain dans votre logement</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔐</div>
+                <h3>Serrurerie</h3>
+                <p>Dépannage d'urgence, installation et changement de serrures</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🛁</div>
+                <h3>Salle de bain</h3>
+                <p>Rénovation complète et aménagement de salles de bain</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🍳</div>
+                <h3>Cuisine</h3>
+                <p>Réfection, modernisation et pose de cuisines</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <h3 style="color: #1a1a1a; margin-bottom: 1.5rem; font-size: 1.8rem;">Nos Types d'interventions</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 800px; margin: 0 auto;">
+                <div style="flex: 1; min-width: 200px; padding: 1.5rem; background: #fff5e6; border-radius: 10px; border-left: 4px solid #ff8c00;">
+                    <h4 style="color: #ff8c00; margin-bottom: 0.5rem;">🚨 Dépannages Urgents</h4>
+                    <p>Intervention rapide 7j/7</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; padding: 1.5rem; background: #fffaeb; border-radius: 10px; border-left: 4px solid #ffa500;">
+                    <h4 style="color: #ff8c00; margin-bottom: 0.5rem;">🔧 Entretien</h4>
+                    <p>Maintenance préventive</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; padding: 1.5rem; background: #f5f5f5; border-radius: 10px; border-left: 4px solid #1a1a1a;">
+                    <h4 style="color: #1a1a1a; margin-bottom: 0.5rem;">🏠 Rénovation</h4>
+                    <p>Travaux de rénovation complète</p>
+                </div>
+                <div style="flex: 1; min-width: 200px; padding: 1.5rem; background: #fffaeb; border-radius: 10px; border-left: 4px solid #ffa500;">
+                    <h4 style="color: #ff8c00; margin-bottom: 0.5rem;">✅ Mise aux normes</h4>
+                    <p>Normalisation et conformité</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="expertise-section">
+        <div class="container">
+            <h2 class="section-title" style="color: #1a1a1a;">Notre Expertise</h2>
+            <div class="expertise-badge">
+                <div style="width: 150px; height: 150px; margin: 0 auto 1.5rem; border-radius: 50%; overflow: hidden; border: 5px solid #ff8c00; box-shadow: 0 5px 20px rgba(255, 140, 0, 0.3);">
+                    <img src="https://via.placeholder.com/150/cccccc/666666?text=Photo" alt="Artisan" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 style="color: #ff8c00; font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: bold;">Xavier Obermeyer</h3>
+                <p style="color: #666; font-size: 1rem; margin-bottom: 2rem; font-style: italic;">Artisan professionnel depuis 1995</p>
+                
+                <div class="expertise-number">30 ANS</div>
+                <h3 style="color: #1a1a1a; font-size: 1.8rem; margin-bottom: 1rem;">D'expérience professionnelle</h3>
+                <p style="font-size: 1.1rem; color: #555; line-height: 1.8; margin-bottom: 1.5rem;">
+                    Fort de trois décennies d'expérience dans les métiers du bâtiment, notre artisan a développé 
+                    un savoir-faire reconnu et une expertise technique approfondie dans tous les corps de métier. 
+                    Chaque intervention est réalisée avec le plus grand soin et le souci du détail qui fait la différence.
+                </p>
+                <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+                    De la simple réparation d'urgence à la rénovation complète de votre habitat, nous mettons 
+                    notre passion du travail bien fait et notre connaissance des normes au service de votre satisfaction. 
+                    Notre longue expérience nous permet d'anticiper les problèmes, de vous conseiller efficacement 
+                    et de garantir des résultats durables et conformes aux réglementations en vigueur.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="zone" class="zone-section">
+        <div class="container">
+            <h2 class="section-title">Zone d'intervention</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem; color: #555;">
+                Nous intervenons dans un rayon de 30 km autour de nos principales zones
+            </p>
+            <div class="zone-list">
+                <div class="zone-item">📍 Aix-en-Provence</div>
+                <div class="zone-item">📍 Marseille</div>
+                <div class="zone-item">📍 Aubagne</div>
+                <div class="zone-item">📍 Pertuis</div>
+                <div class="zone-item">📍 + 30 km autour</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Contactez-nous</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                Besoin d'un dépannage urgent ou d'un devis ? Nous sommes à votre écoute !
+            </p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h3>Téléphone</h3>
+                        <p style="font-size: 1.3rem; font-weight: bold;">06 03 08 46 13</p>
+                        <p style="font-size: 0.9rem; opacity: 0.9;">Disponible 6j/7</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <h3>Email</h3>
+                        <p style="font-size: 1.1rem;">xavier.obermeyer@tdh13.fr</p>
+                
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <div>
+                        <h3>Horaires</h3>
+                        <p>Lundi - Vendredi: 8h - 18h</p>
+                        <p style="font-weight: bold; color: #ffa500;">Urgences 7j/7</p>
+                    </div>
+                </div>
+            </div>
+            	<div style="margin-top: 3rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+						<a href="tel:0603084613" class="cta-button">Appelez-nous maintenant</a>
+						<button class="mail-button" onclick="window.location.href='mailto:xavier.obermeyer@tdh13.fr?subject=Demande%20de%20renseignement&body=Bonjour,%0A%0AJe%20vous%20contacte%20concernant...';">Envoyez nous un mail</button>
+				</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Travaux Dépannages Habitation - Tous droits réservés</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">Artisan professionnel - 30 ans d'expérience - Bouches-du-Rhône</p>
+    </footer>
+</body>
+</html>
