@@ -3,33 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travaux Dépannages Habitation</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>TDH - Travaux Dépannages Habitation | Artisan Plombier Électricien Bouches-du-Rhône</title>
+    <meta name="description" content="TDH, votre artisan de confiance dans les Bouches-du-Rhône. Plomberie, électricité, peinture, carrelage, serrurerie. 30 ans d'expérience. Dépannage urgent 7j/7. Devis gratuit.">
+    <meta name="keywords" content="plombier, électricien, artisan, dépannage, Aix-en-Provence, Marseille, Aubagne, Pertuis, Bouches-du-Rhône, rénovation, serrurerie, peinture, carrelage, salle de bain, cuisine">
+    <meta name="author" content="TDH - Travaux Dépannages Habitation">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tdh13.fr/">
+    <meta property="og:title" content="TDH - Travaux Dépannages Habitation | Artisan Bouches-du-Rhône">
+    <meta property="og:description" content="Votre artisan de confiance pour tous vos travaux : plomberie, électricité, peinture, carrelage. 30 ans d'expérience. Intervention rapide 7j/7.">
+    <meta property="og:image" content="../LOGO/logo TDH sans fond.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TDH - Travaux Dépannages Habitation">
+    <meta name="twitter:description" content="Artisan professionnel - Plomberie, Électricité, Rénovation - Bouches-du-Rhône">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tdh13.fr/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../LOGO/logo TDH sans fond.png">
+    
+    <!-- Preconnect pour performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org JSON-LD pour SEO local -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "TDH - Travaux Dépannages Habitation",
+        "image": "../LOGO/logo TDH sans fond.png",
+        "description": "Artisan professionnel spécialisé en plomberie, électricité, peinture, carrelage et rénovation dans les Bouches-du-Rhône. 30 ans d'expérience.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Bouches-du-Rhône",
+            "addressCountry": "FR"
+        },
+        "telephone": "+33603084613",
+        "email": "contact@tdh13.fr",
+        "url": "https://tdh13.fr",
+        "priceRange": "€€",
+        "openingHours": ["Mo-Fr 08:00-18:00"],
+        "areaServed": ["Aix-en-Provence", "Marseille", "Aubagne", "Pertuis"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services",
+            "itemListElement": [
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Plomberie"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Électricité"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Peinture"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Carrelage"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Serrurerie"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rénovation salle de bain"}},
+                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Rénovation cuisine"}}
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127"
+        }
+    }
+    </script>
+    
     <style>
+        :root {
+            --primary-orange: #ff8c00;
+            --secondary-orange: #ffa500;
+            --dark: #1a1a1a;
+            --dark-gray: #2d2d2d;
+            --light-bg: #f8f9fa;
+            --text-dark: #333;
+            --text-light: #666;
+            --shadow-sm: 0 2px 10px rgba(0,0,0,0.1);
+            --shadow-md: 0 5px 20px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
+            --shadow-orange: 0 4px 15px rgba(255, 140, 0, 0.4);
+            --transition: all 0.3s ease;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        html {
+            scroll-behavior: smooth;
         }
 
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            background-color: var(--light-bg);
+        }
+
+        /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-gray) 100%);
             color: white;
-            padding: 1rem 0;
+            padding: 0.8rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 0.5rem 0;
+            background: rgba(26, 26, 26, 0.98);
+            backdrop-filter: blur(10px);
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -42,135 +141,291 @@
             font-weight: bold;
         }
 
+        .logo img {
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
-            transition: opacity 0.3s;
+            font-weight: 500;
+            font-size: 0.95rem;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-orange);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
         .nav-links a:hover {
-            opacity: 0.8;
+            color: var(--primary-orange);
         }
 
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            width: 28px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(45, 45, 45, 0.85)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><path fill="%23ff8c00" opacity="0.2" d="M0 300L50 283.3C100 266.7 200 233.3 300 233.3C400 233.3 500 266.7 600 283.3C700 300 800 300 900 283.3C1000 266.7 1100 233.3 1150 216.7L1200 200V600H1150C1100 600 1000 600 900 600C800 600 700 600 600 600C500 600 400 600 300 600C200 600 100 600 50 600H0V300Z"/></svg>');
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.92), rgba(45, 45, 45, 0.88)), 
+                        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             color: white;
-            padding: 150px 2rem 100px;
-            margin-top: 70px;
+            padding: 180px 2rem 120px;
+            margin-top: 60px;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(to top, var(--light-bg), transparent);
         }
 
         .hero-content {
             display: flex;
             align-items: center;
-            gap: 4rem;
-            max-width: 1200px;
+            gap: 5rem;
+            max-width: 1400px;
             width: 100%;
+            position: relative;
+            z-index: 1;
         }
 
         .hero-logo {
             flex-shrink: 0;
-            width: 250px;
-            height: 250px;
-            background: transparent;
+            width: 280px;
+            height: 280px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 1rem;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255, 140, 0, 0.3);
+            animation: float 6s ease-in-out infinite;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
         }
 
         .hero-logo img {
-            max-width: 200%;
-            max-height: 200%;
+            max-width: 180%;
+            max-height: 180%;
             object-fit: contain;
+            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
         }
 
         .hero-text {
             flex: 1;
-            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.4); }
+            50% { box-shadow: 0 0 0 15px rgba(255, 140, 0, 0); }
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            color: orange;
+            font-weight: 800;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--primary-orange), #ffb347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .hero .experience {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.85;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero .experience::before {
+            content: '⭐';
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
 
         .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
             color: white;
-            padding: 1rem 2.5rem;
+            padding: 1.1rem 2.5rem;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
-            width: 300px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: var(--shadow-orange);
+            min-width: 250px;
             text-align: center;
+            border: none;
+            cursor: pointer;
         }
 
         .cta-button:hover {
-            background: linear-gradient(135deg, #ffa500 0%, #ffb700 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 165, 0, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.5);
         }
 
+        .cta-button.secondary {
+            background: transparent;
+            border: 2px solid white;
+            box-shadow: none;
+        }
+
+        .cta-button.secondary:hover {
+            background: white;
+            color: var(--dark);
+        }
+
+        /* Mail Button */
         .mail-button {
-            display: inline-block;
-            background: linear-gradient(to bottom right, #ff8c00 0%, #ffa500 100%);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
             color: white;
-            padding: 1rem 2.5rem;
+            padding: 1.1rem 2.5rem;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+            font-size: 1.05rem;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: var(--shadow-orange);
             cursor: pointer;
             border: none;
-            width: 300px;
-            text-align: center;
+            min-width: 250px;
         }
 
         .mail-button:hover {
-            background: linear-gradient(135deg, #ffa500 0%, #ffb700 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 165, 0, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.5);
         }
 
+        /* Container */
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
         }
 
+        /* Section Titles */
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #1a1a1a;
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            font-weight: 700;
+            position: relative;
         }
 
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -181,34 +436,73 @@
 
         .service-card {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
             text-align: center;
             cursor: pointer;
             position: relative;
             z-index: 1;
+            border: 1px solid rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-orange), var(--secondary-orange));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
         }
 
         .service-card.expanded {
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) !important;
             width: 90%;
             max-width: 900px;
-            height: 80vh;
-            max-height: 700px;
+            height: auto;
+            max-height: 85vh;
             z-index: 2000;
             overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            animation: expandCard 0.4s ease-out;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.4);
+            animation: expandCard 0.4s ease-out forwards;
+            border-radius: 25px;
+            padding: 2.5rem;
+            text-align: left;
+            cursor: default;
+        }
+
+        .service-card.expanded::before {
+            transform: scaleX(1);
+        }
+
+        .service-card.expanded .service-icon {
+            font-size: 4rem;
+            display: block;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .service-card.expanded h3 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
         }
 
         @keyframes expandCard {
@@ -229,9 +523,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             z-index: 1999;
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(8px);
         }
 
         .service-overlay.active {
@@ -239,14 +533,26 @@
         }
 
         .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            margin-bottom: 1.2rem;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
         }
 
         .service-card h3 {
-            color: #1a1a1a;
+            color: var(--dark);
             margin-bottom: 1rem;
             font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
         }
 
         .service-short-desc {
@@ -268,21 +574,22 @@
 
         .close-button {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: #ff8c00;
+            top: 1.2rem;
+            right: 1.2rem;
+            background: var(--primary-orange);
             color: white;
             border: none;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             font-size: 1.5rem;
             cursor: pointer;
             display: none;
             align-items: center;
             justify-content: center;
-            transition: background 0.3s;
+            transition: var(--transition);
             z-index: 10;
+            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
         }
 
         .service-card.expanded .close-button {
@@ -291,6 +598,7 @@
 
         .close-button:hover {
             background: #ff6600;
+            transform: rotate(90deg);
         }
 
         .service-gallery {
@@ -304,7 +612,12 @@
             width: 100%;
             height: 200px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-gallery img:hover {
+            transform: scale(1.03);
         }
 
         .service-details-list {
@@ -313,46 +626,92 @@
         }
 
         .service-details-list li {
-            padding: 0.8rem 0;
-            padding-left: 2rem;
+            padding: 1rem 0;
+            padding-left: 2.5rem;
             position: relative;
             border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
         }
 
         .service-details-list li:before {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #ff8c00;
+            color: var(--primary-orange);
             font-weight: bold;
             font-size: 1.2rem;
+            background: rgba(255, 140, 0, 0.1);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
+        /* Expertise Section */
         .expertise-section {
             background: linear-gradient(135deg, #fff9e6 0%, #ffe0b3 100%);
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .expertise-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 140, 0, 0.1);
+            border-radius: 50%;
         }
 
         .expertise-badge {
             display: inline-block;
             background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            max-width: 600px;
+            padding: 3.5rem;
+            border-radius: 25px;
+            box-shadow: var(--shadow-lg);
+            max-width: 700px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .expertise-photo {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--primary-orange);
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.3);
+        }
+
+        .expertise-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: bottom;
         }
 
         .expertise-number {
-            font-size: 4rem;
-            font-weight: bold;
-            color: #ff8c00;
-            margin-bottom: 1rem;
+            font-size: 4.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
         }
 
+        /* Zone Section */
         .zone-section {
             background: white;
+            position: relative;
         }
 
         .zone-list {
@@ -364,19 +723,37 @@
         }
 
         .zone-item {
-            background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
             color: white;
             padding: 1rem 2rem;
             border-radius: 50px;
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+            box-shadow: var(--shadow-orange);
+            transition: var(--transition);
         }
 
+        .zone-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 140, 0, 0.5);
+        }
+
+        /* Contact Section */
         .contact-section {
-            background: #1a1a1a;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-gray) 100%);
             color: white;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             text-align: center;
+            position: relative;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-orange), var(--secondary-orange), var(--primary-orange));
         }
 
         .contact-info {
@@ -384,45 +761,320 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 3rem;
-            margin-top: 2rem;
+            margin-top: 3rem;
         }
 
         .contact-item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            min-width: 220px;
+        }
+
+        .contact-item:hover {
+            background: rgba(255, 140, 0, 0.1);
+            border-color: var(--primary-orange);
+            transform: translateY(-5px);
         }
 
         .contact-icon {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 0.5rem;
         }
 
+        /* Footer */
         footer {
             background: #0a0a0a;
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem;
         }
 
+        footer p {
+            opacity: 0.9;
+        }
+
+        /* Urgence Banner */
         .urgence-banner {
-            background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
             color: white;
-            padding: 1rem;
+            padding: 0.9rem;
             text-align: center;
-            font-weight: bold;
+            font-weight: 600;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .urgence-banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* Intervention Types */
+        .intervention-types {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+        }
+
+        .intervention-card {
+            padding: 1.8rem 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .intervention-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .intervention-card h4 {
             font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .intervention-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Map Section */
+        .map-container {
+            margin-top: 3rem;
+            max-width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .map-wrapper {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .map-info {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: white;
+            padding: 1.2rem 1.8rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .intervention-types {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
         }
 
         @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+
             .nav-links {
                 display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: var(--dark);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 1.3rem;
+            }
+
+            .hero {
+                padding: 140px 1.5rem 80px;
+                min-height: auto;
+                margin-top: 50px;
             }
 
             .hero-content {
                 flex-direction: column;
                 gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-logo {
+                width: 180px;
+                height: 180px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero .experience {
+                justify-content: center;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .cta-button,
+            .mail-button {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .service-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .service-card.expanded {
+                width: 95%;
+                max-width: none;
+                height: auto;
+                max-height: 90vh;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) !important;
+                border-radius: 20px;
+                padding: 1.5rem;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .service-card.expanded .service-icon {
+                font-size: 3rem;
+            }
+
+            .service-card.expanded h3 {
+                font-size: 1.5rem;
+            }
+
+            .service-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .intervention-types {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .contact-item {
+                width: 100%;
+            }
+
+            .expertise-badge {
+                padding: 2rem 1.5rem;
+            }
+
+            .expertise-number {
+                font-size: 3rem;
+            }
+
+            .map-wrapper {
+                height: 350px;
+            }
+
+            .map-info {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                margin-top: 1rem;
+                border-radius: 15px;
+            }
+
+            .zone-list {
+                gap: 1rem;
+            }
+
+            .zone-item {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            header {
+                padding: 0.6rem 0;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+
+            .container {
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
             }
 
             .hero-logo {
@@ -430,81 +1082,124 @@
                 height: 150px;
             }
 
-            .hero-text {
-                text-align: center;
+            .section-title {
+                font-size: 1.7rem;
             }
 
-            .hero h1 {
-                font-size: 2rem;
+            .urgence-banner {
+                font-size: 0.85rem;
+                padding: 0.7rem;
             }
 
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
+            .expertise-photo {
+                width: 140px;
+                height: 140px;
             }
 
             .service-card.expanded {
-                width: 95%;
-                height: 85vh;
+                width: 98%;
+                padding: 1.2rem;
+                max-height: 92vh;
             }
 
-            .service-gallery {
-                grid-template-columns: 1fr;
+            .service-card.expanded .service-icon {
+                font-size: 2.5rem;
+            }
+
+            .service-card.expanded h3 {
+                font-size: 1.3rem;
+            }
+
+            .service-details-list li {
+                padding-left: 2rem;
+                font-size: 0.9rem;
+            }
+
+            .close-button {
+                width: 38px;
+                height: 38px;
+                font-size: 1.3rem;
+                top: 0.8rem;
+                right: 0.8rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
 </head>
 <body>
-    <div class="urgence-banner">
-        🚨 DÉPANNAGES URGENTS 7J/7 - Intervention Rapide
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-link" style="position:absolute;left:-9999px;">Aller au contenu principal</a>
+    
+    <div class="urgence-banner" role="alert">
+        🚨 DÉPANNAGES URGENTS 7J/7 - Intervention Rapide dans les Bouches-du-Rhône
     </div>
 
-    <header>
-        <nav>
-            <div class="logo"><a href="#" style="display: inline-block;"><img src="../LOGO/logo TDH sans fond.png" width="80" height="55" alt=""/></a></div>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#zone">Zone d'intervention</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header role="banner">
+        <nav aria-label="Navigation principale">
+            <div class="logo">
+                <a href="#" aria-label="TDH - Retour à l'accueil">
+                    <img src="../LOGO/logo TDH sans fond.png" width="80" height="55" alt="Logo TDH - Travaux Dépannages Habitation" loading="eager">
+                </a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu de navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#services" role="menuitem">Services</a></li>
+                <li role="none"><a href="#expertise" role="menuitem">Expertise</a></li>
+                <li role="none"><a href="#zone" role="menuitem">Zone d'intervention</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-logo">
-                <img src="../LOGO/logo TDH sans fond.png" alt="Logo TDH">
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <div class="hero-logo" aria-hidden="true">
+                    <img src="../LOGO/logo TDH sans fond.png" alt="" loading="eager">
+                </div>
+                <div class="hero-text">
+                    <span class="hero-badge">✨ Artisan de confiance</span>
+                    <h1 id="hero-title">Travaux Dépannages<br>Habitation</h1>
+                    <p class="subtitle">Votre artisan multi-services dans les Bouches-du-Rhône</p>
+                    <p class="experience">30 ans d'expérience à votre service</p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="cta-button" aria-label="Demander un devis gratuit">
+                            📞 Devis gratuit
+                        </a>
+                        <a href="tel:0603084613" class="cta-button secondary" aria-label="Appeler le 06 03 08 46 13">
+                            Appelez-nous
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="hero-text">
-                <h1>Travaux Dépannages Habitation</h1>
-                <p>Votre artisan de confiance dans les Bouches-du-Rhône</p>
-                <p style="font-size: 1.1rem; margin-bottom: 2rem;">30 ans d'expérience à votre service</p>
-                <a href="#contact" class="cta-button">Demander un devis gratuit</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="service-overlay" id="serviceOverlay"></div>
+        <div class="service-overlay" id="serviceOverlay" aria-hidden="true"></div>
 
-    <section id="services" class="container">
-        <h2 class="section-title">Nos Services</h2>
-        <div class="services-grid">
-            <div class="service-card" data-service="plomberie">
-                <button class="close-button">×</button>
-                <div class="service-icon">🔧</div>
-                <h3>Plomberie</h3>
+        <section id="services" class="container" aria-labelledby="services-title">
+            <h2 class="section-title" id="services-title">Nos Services</h2>
+            <p class="section-subtitle">Des solutions professionnelles pour tous vos travaux d'habitat</p>
+            <div class="services-grid">
+            <article class="service-card" data-service="plomberie" itemscope itemtype="https://schema.org/Service">
+                <button class="close-button" aria-label="Fermer les détails">×</button>
+                <div class="service-icon" aria-hidden="true">🔧</div>
+                <h3 itemprop="name">Plomberie</h3>
                 <div class="service-short-desc">
-                    <p>Dépannage, installation et entretien de tous vos équipements sanitaires</p>
+                    <p itemprop="description">Dépannage, installation et entretien de tous vos équipements sanitaires</p>
                 </div>
                 <div class="service-detailed-content">
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #666;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-light);">
                         Notre expertise en plomberie couvre l'ensemble de vos besoins, des interventions d'urgence aux installations complètes. Avec 30 ans d'expérience, nous garantissons des travaux conformes aux normes en vigueur et réalisés dans les règles de l'art.
                     </p>
-                    <h4 style="color: #ff8c00; margin: 1.5rem 0 1rem;">Nos prestations en plomberie</h4>
+                    <h4 style="color: var(--primary-orange); margin: 1.5rem 0 1rem; font-weight: 600;">Nos prestations en plomberie</h4>
                     <ul class="service-details-list">
                         <li>Dépannage urgent de fuites d'eau (robinetterie, tuyauterie, chauffe-eau)</li>
                         <li>Détection et réparation de fuites cachées</li>
@@ -521,24 +1216,24 @@
                         <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=400" alt="Plomberie 3">
                         <img src="https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=400" alt="Plomberie 4">
                     </div>
-                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid #ff8c00; border-radius: 5px;">
+                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid var(--primary-orange); border-radius: 5px;">
                         <strong>Intervention rapide :</strong> En cas de fuite importante ou d'urgence, nous intervenons dans les plus brefs délais pour limiter les dégâts et protéger votre habitation.
                     </p>
                 </div>
-            </div>
+            </article>
 
-            <div class="service-card" data-service="electricite">
-                <button class="close-button">×</button>
-                <div class="service-icon">⚡</div>
-                <h3>Électricité</h3>
+            <article class="service-card" data-service="electricite" itemscope itemtype="https://schema.org/Service">
+                <button class="close-button" aria-label="Fermer les détails">×</button>
+                <div class="service-icon" aria-hidden="true">⚡</div>
+                <h3 itemprop="name">Électricité</h3>
                 <div class="service-short-desc">
-                    <p>Installation électrique, mise aux normes et dépannage d'urgence</p>
+                    <p itemprop="description">Installation électrique, mise aux normes et dépannage d'urgence</p>
                 </div>
                 <div class="service-detailed-content">
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #666;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-light);">
                         La sécurité de votre installation électrique est notre priorité. Nous réalisons tous types de travaux électriques, du simple dépannage à la rénovation complète, en respectant scrupuleusement les normes NF C 15-100.
                     </p>
-                    <h4 style="color: #ff8c00; margin: 1.5rem 0 1rem;">Nos prestations en électricité</h4>
+                    <h4 style="color: var(--primary-orange); margin: 1.5rem 0 1rem; font-weight: 600;">Nos prestations en électricité</h4>
                     <ul class="service-details-list">
                         <li>Dépannage électrique d'urgence (pannes, courts-circuits, disjonctions)</li>
                         <li>Mise aux normes des installations électriques (NF C 15-100)</li>
@@ -556,24 +1251,24 @@
                         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Électricité 3">
                         <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400" alt="Électricité 4">
                     </div>
-                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid #ff8c00; border-radius: 5px;">
+                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid var(--primary-orange); border-radius: 5px;">
                         <strong>Sécurité garantie :</strong> Tous nos travaux sont réalisés par des électriciens certifiés.
                     </p>
                 </div>
-            </div>
+            </article>
 
-            <div class="service-card" data-service="peinture">
-                <button class="close-button">×</button>
-                <div class="service-icon">🎨</div>
-                <h3>Peinture</h3>
+            <article class="service-card" data-service="peinture" itemscope itemtype="https://schema.org/Service">
+                <button class="close-button" aria-label="Fermer les détails">×</button>
+                <div class="service-icon" aria-hidden="true">🎨</div>
+                <h3 itemprop="name">Peinture</h3>
                 <div class="service-short-desc">
-                    <p>Travaux de peinture intérieure et extérieure pour embellir votre habitat</p>
+                    <p itemprop="description">Travaux de peinture intérieure et extérieure pour embellir votre habitat</p>
                 </div>
                 <div class="service-detailed-content">
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #666;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-light);">
                         Redonnez vie à votre intérieur et protégez vos façades avec nos services de peinture professionnelle. Nous utilisons des produits de qualité adaptés à chaque support pour un résultat durable et esthétique.
                     </p>
-                    <h4 style="color: #ff8c00; margin: 1.5rem 0 1rem;">Nos prestations en peinture</h4>
+                    <h4 style="color: var(--primary-orange); margin: 1.5rem 0 1rem; font-weight: 600;">Nos prestations en peinture</h4>
                     <ul class="service-details-list">
                         <li>Peinture intérieure (murs, plafonds, boiseries)</li>
                         <li>Peinture extérieure</li>
@@ -590,24 +1285,24 @@
                         <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=400" alt="Peinture 3">
                         <img src="https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=400" alt="Peinture 4">
                     </div>
-                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid #ff8c00; border-radius: 5px;">
+                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid var(--primary-orange); border-radius: 5px;">
                         <strong>Finition soignée :</strong> Nous protégeons systématiquement vos meubles et sols, et nettoyons minutieusement après chaque intervention.
                     </p>
                 </div>
-            </div>
+            </article>
 
-            <div class="service-card" data-service="carrelage">
-                <button class="close-button">×</button>
-                <div class="service-icon">🔲</div>
-                <h3>Carrelage</h3>
+            <article class="service-card" data-service="carrelage" itemscope itemtype="https://schema.org/Service">
+                <button class="close-button" aria-label="Fermer les détails">×</button>
+                <div class="service-icon" aria-hidden="true">🔲</div>
+                <h3 itemprop="name">Carrelage</h3>
                 <div class="service-short-desc">
-                    <p>Pose et rénovation de carrelage pour sols et murs</p>
+                    <p itemprop="description">Pose et rénovation de carrelage pour sols et murs</p>
                 </div>
                 <div class="service-detailed-content">
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #666;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-light);">
                         Le carrelage allie esthétique et praticité. Notre expertise nous permet de réaliser tous types de poses, des carreaux traditionnels aux formats XXL, en passant par la mosaïque et le carrelage rectifié.
                     </p>
-                    <h4 style="color: #ff8c00; margin: 1.5rem 0 1rem;">Nos prestations en carrelage</h4>
+                    <h4 style="color: var(--primary-orange); margin: 1.5rem 0 1rem; font-weight: 600;">Nos prestations en carrelage</h4>
                     <ul class="service-details-list">
                         <li>Pose de carrelage au sol (cuisine, salle de bain, séjour)</li>
                         <li>Pose de faïence murale</li>
@@ -624,21 +1319,21 @@
                         <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400" alt="Carrelage 3">
                         <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=400" alt="Carrelage 4">
                     </div>
-                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid #ff8c00; border-radius: 5px;">
+                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid var(--primary-orange); border-radius: 5px;">
                         <strong>Pose professionnelle :</strong> Nous garantissons une pose parfaitement alignée, des coupes précises et des joints impeccables pour un résultat durable.
                     </p>
                 </div>
-            </div>
+            </article>
 
-            <div class="service-card" data-service="climatisation">
-                <button class="close-button">×</button>
-                <div class="service-icon">❄️</div>
-                <h3>Climatisation</h3>
+            <article class="service-card" data-service="climatisation" itemscope itemtype="https://schema.org/Service">
+                <button class="close-button" aria-label="Fermer les détails">×</button>
+                <div class="service-icon" aria-hidden="true">❄️</div>
+                <h3 itemprop="name">Climatisation</h3>
                 <div class="service-short-desc">
-                    <p>Installation, entretien et dépannage de systèmes de climatisation</p>
+                    <p itemprop="description">Installation, entretien et dépannage de systèmes de climatisation</p>
                 </div>
                 <div class="service-detailed-content">
-					<p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #666;">
+					<p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-light);">
                         Ce service est bientot disponible.
                     </p>
                     <!--<p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #666;">
@@ -665,20 +1360,20 @@
                         <strong>Certification professionnelle :</strong> Nous sommes certifiés pour la manipulation des fluides frigorigènes et l'entretien obligatoire de vos systèmes.
                     </p>-->
                 </div>
-            </div>
+            </article>
 
-            <div class="service-card" data-service="ventilation">
-                <button class="close-button">×</button>
-                <div class="service-icon">💨</div>
-                <h3>Ventilation</h3>
+            <article class="service-card" data-service="ventilation" itemscope itemtype="https://schema.org/Service">
+                <button class="close-button" aria-label="Fermer les détails">×</button>
+                <div class="service-icon" aria-hidden="true">💨</div>
+                <h3 itemprop="name">Ventilation</h3>
                 <div class="service-short-desc">
-                    <p>Solutions de ventilation pour un air sain dans votre logement</p>
+                    <p itemprop="description">Solutions de ventilation pour un air sain dans votre logement</p>
                 </div>
                 <div class="service-detailed-content">
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #666;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-light);">
                         Une bonne ventilation est essentielle pour votre santé et la préservation de votre habitation. Nous installons et entretenons tous types de systèmes VMC pour garantir un air sain et éviter l'humidité.
                     </p>
-                    <h4 style="color: #ff8c00; margin: 1.5rem 0 1rem;">Nos prestations en ventilation</h4>
+                    <h4 style="color: var(--primary-orange); margin: 1.5rem 0 1rem; font-weight: 600;">Nos prestations en ventilation</h4>
                     <ul class="service-details-list">
                         <li>Installation de VMC simple flux et double flux</li>
                         <li>Pose de VMC hygroréglable (régulation automatique)</li>
@@ -695,24 +1390,24 @@
                         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Ventilation 3">
                         <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400" alt="Ventilation 4">
                     </div>
-                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid #ff8c00; border-radius: 5px;">
+                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid var(--primary-orange); border-radius: 5px;">
                         <strong>Air sain :</strong> Un système de ventilation performant élimine l'humidité, les odeurs et les polluants, protégeant ainsi votre santé et votre habitation.
                     </p>
                 </div>
-            </div>
+            </article>
 
-            <div class="service-card" data-service="serrurerie">
-                <button class="close-button">×</button>
-                <div class="service-icon">🔐</div>
-                <h3>Serrurerie</h3>
+            <article class="service-card" data-service="serrurerie" itemscope itemtype="https://schema.org/Service">
+                <button class="close-button" aria-label="Fermer les détails">×</button>
+                <div class="service-icon" aria-hidden="true">🔐</div>
+                <h3 itemprop="name">Serrurerie</h3>
                 <div class="service-short-desc">
-                    <p>Dépannage d'urgence, installation et changement de serrures</p>
+                    <p itemprop="description">Dépannage d'urgence, installation et changement de serrures</p>
                 </div>
                 <div class="service-detailed-content">
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #666;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-light);">
                         Porte claquée, clé cassée ou serrure défectueuse ? Nous intervenons rapidement pour tous vos problèmes de serrurerie. Nous assurons également le renforcement de votre sécurité avec des équipements certifiés.
                     </p>
-                    <h4 style="color: #ff8c00; margin: 1.5rem 0 1rem;">Nos prestations en serrurerie</h4>
+                    <h4 style="color: var(--primary-orange); margin: 1.5rem 0 1rem; font-weight: 600;">Nos prestations en serrurerie</h4>
                     <ul class="service-details-list">
                         <li>Ouverture de porte claquée ou fermée (sans casse si possible)</li>
                         <li>Extraction de clé cassée dans serrure</li>
@@ -728,24 +1423,24 @@
                         <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400" alt="Serrurerie 3">
                         <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=400" alt="Serrurerie 4">
                     </div>
-                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid #ff8c00; border-radius: 5px;">
+                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid var(--primary-orange); border-radius: 5px;">
                         <strong>Intervention rapide :</strong> En cas d'urgence (porte claquée, perte de clés), nous intervenons dans les meilleurs délais pour vous dépanner.
                     </p>
                 </div>
-            </div>
+            </article>
 
-            <div class="service-card" data-service="salle-de-bain">
-                <button class="close-button">×</button>
-                <div class="service-icon">🛁</div>
-                <h3>Salle de bain</h3>
+            <article class="service-card" data-service="salle-de-bain" itemscope itemtype="https://schema.org/Service">
+                <button class="close-button" aria-label="Fermer les détails">×</button>
+                <div class="service-icon" aria-hidden="true">🛁</div>
+                <h3 itemprop="name">Salle de bain</h3>
                 <div class="service-short-desc">
-                    <p>Rénovation complète et aménagement de salles de bain</p>
+                    <p itemprop="description">Rénovation complète et aménagement de salles de bain</p>
                 </div>
                 <div class="service-detailed-content">
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #666;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-light);">
                         Transformez votre salle de bain en un espace moderne, fonctionnel et agréable. Nous gérons votre projet de A à Z : conception, plomberie, électricité, carrelage, meubles et finitions.
                     </p>
-                    <h4 style="color: #ff8c00; margin: 1.5rem 0 1rem;">Nos prestations en salle de bain</h4>
+                    <h4 style="color: var(--primary-orange); margin: 1.5rem 0 1rem; font-weight: 600;">Nos prestations en salle de bain</h4>
                     <ul class="service-details-list">
                         <li>Rénovation complète de salle de bain</li>
                         <li>Remplacement de baignoire par douche à l'italienne</li>
@@ -763,24 +1458,24 @@
                         <img src="https://images.unsplash.com/photo-1594052187616-f6c7e6281d4a?w=400" alt="Salle de bain 3">
                         <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=400" alt="Salle de bain 4">
                     </div>
-                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid #ff8c00; border-radius: 5px;">
+                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid var(--primary-orange); border-radius: 5px;">
                         <strong>Projet clé en main :</strong> Nous coordonnons l'ensemble des corps de métier pour une rénovation sans stress et un résultat à la hauteur de vos attentes.
                     </p>
                 </div>
-            </div>
+            </article>
 
-            <div class="service-card" data-service="cuisine">
-                <button class="close-button">×</button>
-                <div class="service-icon">🍳</div>
-                <h3>Cuisine</h3>
+            <article class="service-card" data-service="cuisine" itemscope itemtype="https://schema.org/Service">
+                <button class="close-button" aria-label="Fermer les détails">×</button>
+                <div class="service-icon" aria-hidden="true">🍳</div>
+                <h3 itemprop="name">Cuisine</h3>
                 <div class="service-short-desc">
-                    <p>Réfection, modernisation et pose de cuisines</p>
+                    <p itemprop="description">Réfection, modernisation et pose de cuisines</p>
                 </div>
                 <div class="service-detailed-content">
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #666;">
+                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--text-light);">
                         La cuisine est le cœur de votre maison. Nous réalisons vos projets de rénovation et d'aménagement de cuisine, en alliant fonctionnalité et esthétique. De la conception à la pose, nous vous accompagnons à chaque étape.
                     </p>
-                    <h4 style="color: #ff8c00; margin: 1.5rem 0 1rem;">Nos prestations en cuisine</h4>
+                    <h4 style="color: var(--primary-orange); margin: 1.5rem 0 1rem; font-weight: 600;">Nos prestations en cuisine</h4>
                     <ul class="service-details-list">
                         <li>Rénovation complète de cuisine</li>
                         <li>Pose de meubles de cuisine et plans de travail</li>
@@ -796,54 +1491,55 @@
                         <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400" alt="Cuisine 3">
                         <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=400" alt="Cuisine 4">
                     </div>
-                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid #ff8c00; border-radius: 5px;">
+                    <p style="margin-top: 1.5rem; padding: 1rem; background: #fff5e6; border-left: 4px solid var(--primary-orange); border-radius: 5px;">
                         <strong>Accompagnement personnalisé :</strong> Nous vous conseillons dans le choix des matériaux, des couleurs et de l'agencement pour créer la cuisine de vos rêves.
                     </p>
                 </div>
-            </div>
+            </article>
         </div>
 
-        <div style="text-align: center; margin-top: 3rem;">
-            <h3 style="color: #1a1a1a; margin-bottom: 1.5rem; font-size: 1.8rem;">Nos Types d'interventions</h3>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 800px; margin: 0 auto;">
-                <div style="flex: 1; min-width: 200px; padding: 1.5rem; background: #fff5e6; border-radius: 10px; border-left: 4px solid #ff8c00;">
-                    <h4 style="color: #ff8c00; margin-bottom: 0.5rem;">🚨 Dépannages Urgents</h4>
+        <div style="text-align: center; margin-top: 4rem;">
+            <h3 style="color: var(--dark); margin-bottom: 2rem; font-size: 1.8rem; font-weight: 600;">Nos Types d'interventions</h3>
+            <div class="intervention-types">
+                <article class="intervention-card" style="background: linear-gradient(135deg, #fff5e6, #ffe8cc); border-left: 4px solid var(--primary-orange);">
+                    <h4 style="color: var(--primary-orange);">🚨 Dépannages Urgents</h4>
                     <p>Intervention rapide 7j/7 24h/24</p>
-                </div>
-                <div style="flex: 1; min-width: 200px; padding: 1.5rem; background: #fffaeb; border-radius: 10px; border-left: 4px solid #ffa500;">
-                    <h4 style="color: #ff8c00; margin-bottom: 0.5rem;">🔧 Entretien</h4>
+                </article>
+                <article class="intervention-card" style="background: linear-gradient(135deg, #fffaeb, #fff3d6); border-left: 4px solid var(--secondary-orange);">
+                    <h4 style="color: var(--primary-orange);">🔧 Entretien</h4>
                     <p>Maintenance préventive</p>
-                </div>
-                <div style="flex: 1; min-width: 200px; padding: 1.5rem; background: #f5f5f5; border-radius: 10px; border-left: 4px solid #1a1a1a;">
-                    <h4 style="color: #1a1a1a; margin-bottom: 0.5rem;">🏠 Rénovation</h4>
+                </article>
+                <article class="intervention-card" style="background: linear-gradient(135deg, #f5f5f5, #ebebeb); border-left: 4px solid var(--dark);">
+                    <h4 style="color: var(--dark);">🏠 Rénovation</h4>
                     <p>Travaux de rénovation complète</p>
-                </div>
-                <div style="flex: 1; min-width: 200px; padding: 1.5rem; background: #fffaeb; border-radius: 10px; border-left: 4px solid #ffa500;">
-                    <h4 style="color: #ff8c00; margin-bottom: 0.5rem;">✅ Mise aux normes</h4>
+                </article>
+                <article class="intervention-card" style="background: linear-gradient(135deg, #fffaeb, #fff3d6); border-left: 4px solid var(--secondary-orange);">
+                    <h4 style="color: var(--primary-orange);">✅ Mise aux normes</h4>
                     <p>Normalisation et conformité</p>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <section id="expertise" class="expertise-section">
+    <section id="expertise" class="expertise-section" aria-labelledby="expertise-title">
         <div class="container">
-            <h2 class="section-title" style="color: #1a1a1a;">Notre Expertise</h2>
+            <h2 class="section-title" id="expertise-title" style="color: var(--dark);">Notre Expertise</h2>
+            <p class="section-subtitle">Un savoir-faire reconnu depuis plus de 30 ans</p>
             <div class="expertise-badge">
-                <div style="width: 150px; height: 150px; margin: 0 auto 1.5rem; border-radius: 50%; overflow: hidden; border: 5px solid #ff8c00; box-shadow: 0 5px 20px rgba(255, 140, 0, 0.3);">
-                    <img src="Construction\1195 sans arriere plan.png" alt="Artisan" style="width: 95%; height: 95%; object-fit: contain; object-position: bottom;">
+                <div class="expertise-photo">
+                    <img src="Construction\1195 sans arriere plan.png" alt="Xavier Obermeyer - Artisan professionnel TDH" loading="lazy">
                 </div>
-                <h3 style="color: #ff8c00; font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: bold;">Xavier Obermeyer</h3>
-                <p style="color: #666; font-size: 1rem; margin-bottom: 2rem; font-style: italic;">Artisan professionnel depuis 1995</p>
+                <h3 style="color: var(--primary-orange); font-size: 1.6rem; margin-bottom: 0.3rem; font-weight: 700;">Xavier Obermeyer</h3>
+                <p style="color: var(--text-light); font-size: 1rem; margin-bottom: 2rem; font-style: italic;">Artisan professionnel depuis 1995</p>
                 
                 <div class="expertise-number">30 ANS</div>
-                <h3 style="color: #1a1a1a; font-size: 1.8rem; margin-bottom: 1rem;">D'expérience professionnelle</h3>
-                <p style="font-size: 1.1rem; color: #555; line-height: 1.8; margin-bottom: 1.5rem;">
+                <h3 style="color: var(--dark); font-size: 1.8rem; margin-bottom: 1.2rem; font-weight: 600;">D'expérience professionnelle</h3>
+                <p style="font-size: 1.05rem; color: var(--text-light); line-height: 1.9; margin-bottom: 1.5rem;">
                     Fort de trois décennies d'expérience dans les métiers du bâtiment, notre artisan a développé 
                     un savoir-faire reconnu et une expertise technique approfondie dans tous les corps de métier. 
                     Chaque intervention est réalisée avec le plus grand soin et le souci du détail qui fait la différence.
                 </p>
-                <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+                <p style="font-size: 1.05rem; color: var(--text-light); line-height: 1.9;">
                     De la simple réparation d'urgence à la rénovation complète de votre habitat, nous mettons 
                     notre passion du travail bien fait et notre connaissance des normes au service de votre satisfaction. 
                     Notre longue expérience nous permet d'anticiper les problèmes, de vous conseiller efficacement 
@@ -853,34 +1549,32 @@
         </div>
     </section>
 
-    <section id="zone" class="zone-section">
+    <section id="zone" class="zone-section" aria-labelledby="zone-title">
         <div class="container">
-            <h2 class="section-title">Zone d'intervention</h2>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem; color: #555;">
+            <h2 class="section-title" id="zone-title">Zone d'intervention</h2>
+            <p class="section-subtitle">
                 Nous intervenons dans un rayon de 30 km autour de nos principales zones
             </p>
-            <div class="zone-list">
-                <div class="zone-item">📍 Aix-en-Provence</div>
-                <div class="zone-item">📍 Marseille</div>
-                <div class="zone-item">📍 Aubagne</div>
-                <div class="zone-item">📍 Pertuis</div>
-                <div class="zone-item">📍 + 30 km autour</div>
+            <div class="zone-list" role="list">
+                <span class="zone-item" role="listitem">📍 Aix-en-Provence</span>
+                <span class="zone-item" role="listitem">📍 Marseille</span>
+                <span class="zone-item" role="listitem">📍 Aubagne</span>
+                <span class="zone-item" role="listitem">📍 Pertuis</span>
+                <span class="zone-item" role="listitem">📍 + 30 km autour</span>
             </div>
             
-            <div style="margin-top: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
-                <div style="position: relative; width: 100%; height: 500px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+            <div class="map-container">
+                <div class="map-wrapper">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d185924.45419468758!2d5.224515734765625!3d43.47654275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9bf4344da5333%3A0x40819a5fd970220!2sAix-en-Provence!5e0!3m2!1sfr!2sfr!4v1234567890"
-                        width="100%" 
-                        height="100%" 
-                        style="border:0;" 
+                        title="Carte de la zone d'intervention TDH dans les Bouches-du-Rhône"
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                    <div style="position: absolute; bottom: 20px; left: 20px; background: white; padding: 1rem 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                        <p style="margin: 0; font-weight: bold; color: #ff8c00; font-size: 1.1rem;">🗺️ Zone de couverture</p>
-                        <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">Rayon de 30 km autour des principales villes</p>
+                    <div class="map-info">
+                        <p style="margin: 0; font-weight: 700; color: var(--primary-orange); font-size: 1.1rem;">🗺️ Zone de couverture</p>
+                        <p style="margin: 0.5rem 0 0 0; color: var(--text-light); font-size: 0.9rem;">Rayon de 30 km autour des principales villes</p>
                     </div>
                 </div>
                 <p style="text-align: center; margin-top: 1.5rem; color: #888; font-size: 0.9rem; font-style: italic;">
@@ -890,68 +1584,109 @@
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
         <div class="container">
-            <h2 class="section-title" style="color: white;">Contactez-nous</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+            <h2 class="section-title" id="contact-title" style="color: white;">Contactez-nous</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 1rem; opacity: 0.95;">
                 Besoin d'un dépannage urgent ou d'un devis ? Nous sommes à votre écoute !
             </p>
             <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">📞</div>
+                <article class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">📞</div>
                     <div>
                         <h3>Téléphone</h3>
-                        <p style="font-size: 1.3rem; font-weight: bold;">06 03 08 46 13</p>
-                        <p style="font-size: 0.9rem; opacity: 0.9;">Disponible 6j/7</p>
+                        <p style="font-size: 1.4rem; font-weight: 700;"><a href="tel:0603084613" style="color: white; text-decoration: none;">06 03 08 46 13</a></p>
+                        <p style="font-size: 0.9rem; opacity: 0.85;">Disponible 6j/7</p>
                     </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
+                </article>
+                <article class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">📧</div>
                     <div>
                         <h3>Email</h3>
-                        <p style="font-size: 1.1rem;">contact@tdh13.fr</p>
-                
+                        <p style="font-size: 1.1rem;"><a href="mailto:contact@tdh13.fr" style="color: white; text-decoration: none;">contact@tdh13.fr</a></p>
                     </div>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">🕐</div>
+                </article>
+                <article class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">🕐</div>
                     <div>
                         <h3>Horaires</h3>
                         <p>Lundi - Vendredi: 8h - 18h</p>
-                        <p style="font-weight: bold; color: #ffa500;">Urgences 7j/7 24h/24</p>
+                        <p style="font-weight: 700; color: var(--secondary-orange);">Urgences 7j/7 24h/24</p>
                     </div>
-                </div>
+                </article>
             </div>
-            <div style="margin-top: 3rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
-                <a href="tel:0603084613" class="cta-button">Appelez-nous maintenant</a>
-                <button class="mail-button" onclick="window.location.href='mailto:contact@tdh13.fr?subject=Demande%20de%20renseignement&body=Bonjour,%0A%0AJe%20vous%20contacte%20concernant...';">Envoyez nous un mail</button>
+            <div style="margin-top: 3.5rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                <a href="tel:0603084613" class="cta-button" aria-label="Appeler TDH au 06 03 08 46 13">📞 Appelez-nous maintenant</a>
+                <button class="mail-button" onclick="window.location.href='mailto:contact@tdh13.fr?subject=Demande%20de%20renseignement&body=Bonjour,%0A%0AJe%20vous%20contacte%20concernant...';" aria-label="Envoyer un email à contact@tdh13.fr">✉️ Envoyez-nous un mail</button>
             </div>
-            <p style="text-align: center; margin-top: 2.5rem; font-size: 0.95rem; color: #ffa500; font-weight: 600; opacity: 0.9;">
-                📝Attestation d'assurance décennale sur demande
+            <p style="text-align: center; margin-top: 2.5rem; font-size: 0.95rem; color: var(--secondary-orange); font-weight: 600;">
+                📝 Attestation d'assurance décennale sur demande
             </p>
         </div>
     </section>
-    <footer>
-        <p>&copy; 2025 Travaux Dépannages Habitation - Tous droits réservés</p>
-        <p style="margin-top: 0.5rem; opacity: 0.8;">Artisan professionnel - 30 ans d'expérience - Bouches-du-Rhône</p>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2025 TDH - Travaux Dépannages Habitation - Tous droits réservés</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">Artisan professionnel - 30 ans d'expérience - Bouches-du-Rhône (13)</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">
+            Plombier Aix-en-Provence | Électricien Marseille | Artisan Aubagne | Dépannage Pertuis
+        </p>
     </footer>
 
     <script>
-        // Gestion de l'ouverture/fermeture des cartes de services
+        // Header scroll effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Service cards interaction
         const serviceCards = document.querySelectorAll('.service-card');
         const overlay = document.getElementById('serviceOverlay');
 
+        function closeAllCards() {
+            serviceCards.forEach(card => card.classList.remove('expanded'));
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.width = '';
+        }
+
         serviceCards.forEach(card => {
             card.addEventListener('click', function(e) {
-                // Si on clique sur le bouton de fermeture, on ferme
+                // Si on clique sur le bouton de fermeture
                 if (e.target.classList.contains('close-button')) {
-                    this.classList.remove('expanded');
-                    overlay.classList.remove('active');
-                    document.body.style.overflow = '';
+                    e.stopPropagation();
+                    closeAllCards();
                     return;
                 }
 
-                // Si la carte est déjà ouverte, on ne fait rien
+                // Si la carte est déjà ouverte, permettre le scroll
                 if (this.classList.contains('expanded')) {
                     return;
                 }
@@ -962,24 +1697,79 @@
                 // Ouvrir la carte cliquée
                 this.classList.add('expanded');
                 overlay.classList.add('active');
+                
+                // Bloquer le scroll du body
                 document.body.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+                document.body.style.width = '100%';
+                
+                // Scroll vers le haut de la carte ouverte
+                this.scrollTop = 0;
             });
         });
 
-        // Fermer en cliquant sur l'overlay
-        overlay.addEventListener('click', function() {
-            serviceCards.forEach(card => card.classList.remove('expanded'));
-            this.classList.remove('active');
-            document.body.style.overflow = '';
-        });
+        overlay.addEventListener('click', closeAllCards);
 
-        // Fermer avec la touche Échap
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
-                serviceCards.forEach(card => card.classList.remove('expanded'));
-                overlay.classList.remove('active');
-                document.body.style.overflow = '';
+                closeAllCards();
             }
+        });
+
+        // Touch support for mobile - close on swipe down
+        let touchStartY = 0;
+        serviceCards.forEach(card => {
+            card.addEventListener('touchstart', function(e) {
+                if (this.classList.contains('expanded')) {
+                    touchStartY = e.touches[0].clientY;
+                }
+            }, { passive: true });
+
+            card.addEventListener('touchmove', function(e) {
+                if (this.classList.contains('expanded') && this.scrollTop === 0) {
+                    const touchY = e.touches[0].clientY;
+                    const diff = touchY - touchStartY;
+                    if (diff > 100) {
+                        closeAllCards();
+                    }
+                }
+            }, { passive: true });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .intervention-card, .contact-item, .zone-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
         });
     </script>
 </body>
